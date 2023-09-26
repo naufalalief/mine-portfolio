@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Personal Website</title>
+    <style>
+      :root{
+        --bg-color: #ece6c2;
+        --text-color: #6f5643;
+        --primary-color: #cc6b49;
+        --secondary-color: #d2a24c;
+        --tertiary-color: #73bda8;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background-color: var(--bg-color);
+        color: var(--text-color);
+      }
+      /* Container styles */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      /* Navbar styles */
+      nav {
+        background-color: var(--tertiary-color);
+        color: var(--text-color);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        /* position: fixed; */
+        /* top: 0;
+        left: 0;
+        right: 0;
+        z-index: 99999; */
+      }
+
+      /* Logo styles */
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border: #ccc 2px solid;
+      }
+      .logo img {
+        height: 50px;
+        border-radius: 100%;
+      }
+
+      /* Navigation links styles */
+      ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        margin: 0 10px;
+      }
+
+      a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      a:hover {
+        color: var(--bg-color);
+      }
+      .hero {
+        background-image: url("background.jpg");
+        background-size: cover;
+        background-position: center;
+        height: 800px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        /* color: #333; */
+        margin: 30px 0;
+        border: #333 5px solid;
+      }
+
+      /* Header styles */
+      .hero h1 {
+        font-size: 48px;
+        font-weight: bold;
+        margin: 0;
+      }
+
+      /* Paragraph styles */
+      .hero p {
+        font-size: 24px;
+        margin: 20px 0 0;
+      }
+      .about {
+        margin: 30px 0;
+      }
+      .about h2 {
+        text-align: left;
+        font-size: 36px;
+        font-weight: bold;
+        margin: 0;
+        border: #333 5px solid;
+      }
+      .about .content {
+        display: flex;
+        /* padding: 20px; */
+        border: #333  5px solid;
+      }
+      .about .content img {
+        width: 300px;
+        height: 300px;
+        border-radius: 10%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">
+          <a href="https://github.com/naufalalief" target="_blank"
+            ><img src="./image/btr.jpg" alt=""
+          /></a>
+        </div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Article</a></li>
+        </ul>
+      </nav>
+      <section class="hero">
+        <h1>Naufal Alief</h1>
+        <p>Full Stack Web Developer</p>
+      </section>
+      <section class="about">
+        <h2>About</h2>
+        <div class="content">
+          <img class="img" src="./image/about.jpg" alt="img" />
+          <div class="text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatum, quibusdam, quia, voluptate quod quos voluptas
+              exercitationem quas voluptatibus quidem doloribus. Quisquam
+              voluptatum, quibusdam, quia, voluptate quod quos voluptas
+              exercitationem quas voluptatibus quidem doloribus.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

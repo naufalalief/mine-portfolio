@@ -1,0 +1,59 @@
+// const minimal = (a, b) => {
+//   if (a < b) {
+//     return a;
+//   } else if (b < a) {
+//     return b;
+//   } else {
+//     return a;
+//   }
+// };
+// const findIndex = (array, number) => {
+//   for (let i = 0; i < array.length; i++) {
+//     if (array[i] === number) {
+//       return i;
+//     }
+//   }
+//   return -1;
+// }
+// console.log(minimal(3, 2));
+// console.log(findIndex([1, 2, 3, 4, 5], 3));
+
+// class Animal {
+//   constructor(name, age, isMammal) {
+//     this.name = name;
+//     this.age = age;
+//     this.isMammal = isMammal;
+//   }
+// }
+// class Rabbit extends Animal {
+//   constructor(name, age, isMammal) {
+//     super(name, age, isMammal);
+//     this.isMammal = true;
+//   }
+//   eat() {
+//     return `${this.name} sedang makan!`;
+//   }
+// }
+// class Eagle extends Animal {
+//   constructor(name, age, isMammal) {
+//     super(name, age, isMammal);
+//     this.isMammal = false;
+//   }
+//   fly() {
+//     return `${this.name} sedang terbang!`;
+//   }
+// }
+// const myRabbit = new Rabbit("Labi", 2);
+// const myEagle = new Eagle("Elo", 4);
+
+// class Car { }
+// const car = new Car();
+// console.log(typeof Car);
+
+function car({ brand, maxSpeed, wheelCount }) {
+  this.brand = brand;
+  this.maxSpeed = maxSpeed;
+  this.wheelCount = wheelCount;
+}
+
+const myCar = car({ brand: 'Toyota', maxSpeed: 200, wheelCount: 4 });

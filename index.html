@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Personal Website</title>
+    <style>
+      :root {
+        --primary-color: #edf7f6;
+        --secondary-color: #2660a4;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        font-size: 1.25rem;
+        background-color: var(--primary-color);
+        color: white;
+      }
+      /* Container styles */
+      .container {
+        max-width: 808px;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        height: 7rem;
+      }
+
+      nav .logo a {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        color: var(--secondary-color);
+        text-decoration: none;
+      }
+
+      /* Navigation links styles */
+      nav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+
+      nav ul li a {
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        padding: 0 16px;
+        letter-spacing: 1px;
+      }
+
+      a:hover {
+        /* color: ; */
+      }
+      .nav .icon {
+        color: #2660a4;
+      }
+      .hero {
+        /* background-color: var(--secondary-color); */
+        color: var(--secondary-color);
+        margin: 30px 0;
+      }
+      .hero .content,
+      .hero .part {
+        max-width: 55ch;
+        padding: 10px;
+        text-align: left;
+        margin: 64px 0;
+        border: #2660a4 2px solid;
+      }
+      .hero .part {
+        border: #2660a4 2px solid;
+        margin: 0;
+        padding: 10px;
+      }
+      .hero .part ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+        padding: 0 20px;
+      }
+      .hero .part ul li {
+        margin: 5px 0;
+        padding: 10px;
+      }
+      .hero .part ul li a:first-child {
+        background-color: var(--secondary-color);
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--primary-color);
+        padding: 10px 20px;
+        letter-spacing: 1px;
+      }
+      .hero .part ul li a:last-child{
+        color: var(--secondary-color);
+        font-size: 1rem;
+        text-decoration: none;
+        display: inline-block;
+      }
+      .hero .part ul li a:last-child::after{
+        content: "";
+        display: block;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        border-bottom: 2px solid var(--secondary-color);
+        transform: scaleX(0);
+        transform-origin: left;
+        width: 100%;
+      }
+      .hero .part ul li a:last-child:hover::after{
+        transform: scaleX(0.5);
+        transition: 0.1s linear;
+      }
+      .hero .content span {
+        font-style: italic;
+      }
+      /* Header styles */
+      .hero .content h1,
+      .hero .part h2 {
+        font-size: 32px;
+        padding: 0 20px;
+        margin: 10px 0;
+        font-weight: bold;
+      }
+
+      /* Paragraph styles */
+      .hero .content p,
+      .hero .content a {
+        font-size: 19px;
+        padding: 0 20px;
+        text-align: left;
+      }
+      .hero .content a {
+        /* display: block; */
+        text-decoration: none;
+        color: var(--secondary-color);
+        border: 2px solid var(--secondary-color);
+        padding: 10px 20px;
+        border-radius: 5px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Portfolio</a></li>
+          <li><a href="#">Article</a></li>
+        </ul>
+        <div class="icon" id="icon">
+          <a href="#">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke=" #2660a4"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-moon"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <section class="hero">
+        <div class="content">
+          <h1>Naufal Alief</h1>
+          <p>
+            Memasuki dunia IT sebagai <span>Full Stack Web Developer</span>.
+            Tertarik dalam bidang
+            <span>Web Development, dan Data Science</span>.
+          </p>
+          <a href="#">Lihat Selengkapnya</a>
+        </div>
+        <div class="part">
+          <h2>Terbaru</h2>
+          <ul>
+            <li>
+              <a href="#">Portfolio</a>
+              <a href="">Skilvul Landing Page</a>
+            </li>
+            <li>
+              <a href="#">Portfolio</a>
+              <a href="">PPDB SSB Petrokimia Gresik</a>
+            </li>
+            <li>
+              <a href="#">Portfolio</a>
+              <a href="#">Arsip Surat</a>
+            </li>
+            <li>
+              <a href="#">Portfolio</a>
+              <a href="#">Portofolio</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- <section class="about">
+        <h2>About</h2>
+        <div class="content">
+          <img class="img" src="./image/about.jpg" alt="img" />
+          <div class="text">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              voluptatum, quibusdam, quia, voluptate quod quos voluptas
+              exercitationem quas voluptatibus quidem doloribus. Quisquam
+              voluptatum, quibusdam, quia, voluptate quod quos voluptas
+              exercitationem quas voluptatibus quidem doloribus.
+            </p>
+          </div>
+        </div>
+      </section> -->
+    </div>
+  </body>
+</html>
