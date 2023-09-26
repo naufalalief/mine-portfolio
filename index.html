@@ -56,7 +56,12 @@
         padding: 0 16px;
         letter-spacing: 1px;
       }
-
+      nav .icon button#toggle-btn {
+        background-color: transparent;
+        border: none;
+        outline: none;
+        cursor: pointer;
+      }
       a:hover {
         /* color: ; */
       }
@@ -74,10 +79,10 @@
         padding: 10px;
         text-align: left;
         margin: 64px 0;
-        border: #2660a4 2px solid;
+        /* border: #2660a4 2px solid; */
       }
       .hero .part {
-        border: #2660a4 2px solid;
+        /* border: #2660a4 2px solid; */
         margin: 0;
         padding: 10px;
       }
@@ -85,7 +90,7 @@
         list-style: none;
         display: flex;
         flex-direction: column;
-        margin: 10px 0;
+        margin: 10px 0 32px 0;
         padding: 0 20px;
       }
       .hero .part ul li {
@@ -101,13 +106,13 @@
         padding: 10px 20px;
         letter-spacing: 1px;
       }
-      .hero .part ul li a:last-child{
+      .hero .part ul li a:last-child {
         color: var(--secondary-color);
         font-size: 1rem;
         text-decoration: none;
         display: inline-block;
       }
-      .hero .part ul li a:last-child::after{
+      .hero .part ul li a:last-child::after {
         content: "";
         display: block;
         padding-bottom: 5px;
@@ -117,7 +122,7 @@
         transform-origin: left;
         width: 100%;
       }
-      .hero .part ul li a:last-child:hover::after{
+      .hero .part ul li a:last-child:hover::after {
         transform: scaleX(0.5);
         transition: 0.1s linear;
       }
@@ -139,8 +144,11 @@
         font-size: 19px;
         padding: 0 20px;
         text-align: left;
+        line-height: 1.7;
+        margin-bottom: 32px;
       }
-      .hero .content a {
+      .hero .content a.more,
+      .hero .part a.more {
         /* display: block; */
         text-decoration: none;
         color: var(--secondary-color);
@@ -161,22 +169,9 @@
           <li><a href="#">Article</a></li>
         </ul>
         <div class="icon" id="icon">
-          <a href="#">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke=" #2660a4"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="feather feather-moon"
-            >
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-            </svg>
-          </a>
+          <button id="toggle-btn">
+            <img src="./image/moon.svg" alt="" />
+          </button>
         </div>
       </nav>
       <section class="hero">
@@ -187,7 +182,7 @@
             Tertarik dalam bidang
             <span>Web Development, dan Data Science</span>.
           </p>
-          <a href="#">Lihat Selengkapnya</a>
+          <a href="#" class="more">Lihat Selengkapnya</a>
         </div>
         <div class="part">
           <h2>Terbaru</h2>
@@ -209,6 +204,7 @@
               <a href="#">Portofolio</a>
             </li>
           </ul>
+          <a href="#" class="more">Lihat Selengkapnya</a>
         </div>
       </section>
       <!-- <section class="about">
@@ -228,4 +224,5 @@
       </section> -->
     </div>
   </body>
+  <script src="./js/script.js"></script>
 </html>

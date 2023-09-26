@@ -50,10 +50,18 @@
 // const car = new Car();
 // console.log(typeof Car);
 
-function car({ brand, maxSpeed, wheelCount }) {
-  this.brand = brand;
-  this.maxSpeed = maxSpeed;
-  this.wheelCount = wheelCount;
-}
+// function car({ brand, maxSpeed, wheelCount }) {
+//   this.brand = brand;
+//   this.maxSpeed = maxSpeed;
+//   this.wheelCount = wheelCount;
+// }
 
-const myCar = car({ brand: 'Toyota', maxSpeed: 200, wheelCount: 4 });
+// const myCar = car({ brand: 'Toyota', maxSpeed: 200, wheelCount: 4 });
+const toggleBtn = document.getElementById("toggle-btn");
+const icon = toggleBtn.querySelector("img");
+
+toggleBtn.addEventListener("click", function () {
+  document.body.classList.toggle("dark");
+  const isDarkMode = document.body.classList.contains("dark");
+  icon.src = isDarkMode ? "image/sun.svg" : "image/moon.svg";
+});
