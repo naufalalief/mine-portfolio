@@ -57,6 +57,7 @@
 // }
 
 // const myCar = car({ brand: 'Toyota', maxSpeed: 200, wheelCount: 4 });
+
 const toggleBtn = document.getElementById("toggle-btn");
 const icon = toggleBtn.querySelector("img");
 
@@ -65,3 +66,17 @@ toggleBtn.addEventListener("click", function () {
   const isDarkMode = document.body.classList.contains("dark");
   icon.src = isDarkMode ? "image/sun.svg" : "image/moon.svg";
 });
+
+// const bilPrima = (n) => {
+//   let prima = [];
+//   for (let i = 2; i <= n; i++) {
+//     let count = 0;
+//     for (let j = 1; j <= i; j++) {
+//       if (i % j === 0) count++;
+//     }
+//     if (count === 2) prima.push(i);
+//   }
+//   return prima;
+// };
+
+// console.log(bilPrima(30));

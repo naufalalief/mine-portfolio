@@ -1,0 +1,284 @@
+:root {
+  --primary-color: #edf7f6;
+  --secondary-color: #2660a4;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.25rem;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+/* Container styles */
+.container {
+  max-width: 808px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 0 10px; */
+  height: 7rem;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Navigation links styles */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  /* margin: 0 10px; */
+}
+nav ul li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  /* padding: 0 20px; */
+  margin: 10px;
+  letter-spacing: 1px;
+}
+nav .icon button#toggle-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+a:hover {
+  /* color: ; */
+}
+.nav .icon {
+  color: #2660a4;
+}
+.hero,
+.main-section,
+.cards-section {
+  /* background-color: var(--secondary-color); */
+  color: var(--secondary-color);
+  margin: 30px 0;
+}
+.hero .content,
+.hero .part,
+.main-section .profile,
+.main-section .experiences,
+.cards-section .card {
+  max-width: 50ch;
+  padding: 10px;
+  text-align: left;
+  margin: 32px 0;
+}
+.hero .part {
+  margin: 32px 0;
+  padding: 10px;
+}
+.hero .part ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 32px 0;
+  padding: 0 20px;
+}
+.hero .part ul li {
+  margin: 2.5px 0;
+  padding: 10px;
+}
+.hero .part ul li a:first-child {
+  background-color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  padding: 10px 20px;
+  letter-spacing: 1px;
+}
+.hero .part ul li a:last-child {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 300;
+  padding: 0 20px;
+}
+.hero .part ul li a:last-child::after {
+  content: "";
+  display: block;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  border-bottom: 2px solid var(--secondary-color);
+  transform: scaleX(0);
+  transform-origin: left;
+  width: 100%;
+}
+.hero .part ul li a:last-child:hover::after {
+  transform: scaleX(0.5);
+  transition: 0.1s linear;
+}
+.hero .content span,
+.main-section .profile span,
+.main-section .experiences span {
+  font-weight: 300;
+  font-style: italic;
+}
+/* Header styles */
+.hero .content h1,
+.main-section .profile h1,
+.main-section .experiences h1,
+.main-section .experiences h2,
+.main-section .experiences h3,
+.main-section .experiences h4,
+.cards-section .card h1 {
+  font-size: 32px;
+  padding: 0 20px;
+  margin: 10px 0;
+  font-weight: 400;
+}
+.main-section .profile h1,
+.main-section .experiences h1 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+.main-section .experiences h2 {
+  font-size: 24px;
+  margin: 5px 0;
+}
+.main-section .experiences h3 {
+  font-size: 18px;
+  margin: 5px 0;
+}
+.main-section .experiences h4 {
+  font-size: 10px;
+  margin: 5px 0;
+}
+/* Paragraph styles */
+.hero .content p,
+.main-section .profile p,
+.main-section .experiences p,
+.hero .content a,
+.cards-section .card .project-links p,
+footer .copy p {
+  font-size: 19px;
+  padding: 0 20px;
+  text-align: justify;
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 12;
+}
+.hero .content a.more {
+  /* display: block; */
+  text-decoration: none;
+  color: var(--secondary-color);
+  /* margin: 10px; */
+}
+
+.main-section .profile .about {
+  float: right;
+  height: 300px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5%;
+}
+.cards-section .card{
+}
+.cards-section .card .project-links p a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+.cards-section .card .project-links p a::after{
+    content: "";
+    display: block;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+    transform: scaleX(0);
+    transform-origin: left;
+}
+.cards-section .card .project-links p a:hover::after{
+    transform: scaleX(0.2);
+    transition: 0.1s linear;
+}
+.cards-section .card .project-links p a input:invalid{
+    color: red;
+}
+footer {
+  border-top: var(--secondary-color) 1px solid;
+  /* padding: 0 10px; */
+  margin: 32px 0;
+}
+footer .link {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px 0;
+}
+footer .link ul {
+  list-style: none;
+  display: flex;
+  margin: 24px 0 0 0;
+  padding: 0;
+}
+footer .link ul li {
+  margin: 0;
+}
+footer .link ul li a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 16px;
+  /* font-weight: bold; */
+  /* padding: 0 10px; */
+  margin: 10px;
+  letter-spacing: 1px;
+}
+footer .copy {
+  /* display: flex;
+  justify-content: space-between; */
+  margin-top: 32px;
+  /* padding: 0 20px; */
+}
+footer .copy p {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  padding: 0 10px;
+}
+footer .copy .content {
+  display: flex;
+  justify-content: start;
+  padding: 0 10px;
+  margin: 10px 0;
+}
+footer .copy .content .dot {
+  padding: 0 10px;
+  margin: 10px;
+}
+footer .copy .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 10px 0;
+  padding: 0;
+}
+footer .copy .content a {
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+footer .copy .end {
+  font-weight: 300;
+  margin: 24px 0;
+  padding: 0 10px;
+}
