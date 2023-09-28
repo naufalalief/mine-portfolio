@@ -10,7 +10,29 @@ body {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
+.dark {
+  background-color: lightslategrey;
+  color: white !important;
+}
 
+.dark a,
+.dark .hero .content a,
+.dark .hero .part ul li a:last-child,
+.dark a:last-child,
+.dark footer .link ul li a,
+.dark footer .copy .content a,
+.main-section .download-link a,
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark p {
+  color: white !important;
+}
+
+.dark a:hover {
+  color: slategrey;
+}
 /* Container styles */
 .container {
   max-width: 808px;
@@ -186,7 +208,7 @@ footer .copy p {
   font-weight: 300;
   margin-bottom: 12;
 }
-.hero .content a.more,
+.hero .content a,
 .main-section .download-link a {
   /* display: block; */
   text-decoration: none;
