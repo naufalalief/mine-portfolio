@@ -6,10 +6,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Ubuntu", sans-serif;
-  font-size: 1.25rem;
+  font-size: 16px;
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
+
 /* Container styles */
 .container {
   max-width: 808px;
@@ -47,7 +48,7 @@ nav ul li {
 nav ul li a {
   color: var(--secondary-color);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
   /* padding: 0 20px; */
   margin: 10px;
@@ -67,7 +68,8 @@ a:hover {
 }
 .hero,
 .main-section,
-.cards-section {
+.cards-section,
+.blog-section {
   /* background-color: var(--secondary-color); */
   color: var(--secondary-color);
   margin: 30px 0;
@@ -76,7 +78,9 @@ a:hover {
 .hero .part,
 .main-section .profile,
 .main-section .experiences,
-.cards-section .card {
+.main-section .download-link,
+.cards-section .card,
+.blog-section .list-card {
   max-width: 50ch;
   padding: 10px;
   text-align: left;
@@ -100,7 +104,7 @@ a:hover {
 .hero .part ul li a:first-child {
   background-color: var(--secondary-color);
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 500;
   color: var(--primary-color);
   padding: 10px 20px;
@@ -108,7 +112,7 @@ a:hover {
 }
 .hero .part ul li a:last-child {
   color: var(--secondary-color);
-  font-size: 1rem;
+  font-size: 16px;
   text-decoration: none;
   display: inline-block;
   font-weight: 300;
@@ -141,7 +145,9 @@ a:hover {
 .main-section .experiences h2,
 .main-section .experiences h3,
 .main-section .experiences h4,
-.cards-section .card h1 {
+.cards-section .card h1,
+.blog-section .list-card h1,
+.blog-section .list-card h2 {
   font-size: 32px;
   padding: 0 20px;
   margin: 10px 0;
@@ -152,7 +158,8 @@ a:hover {
   font-size: 32px;
   margin: 10px 0;
 }
-.main-section .experiences h2 {
+.main-section .experiences h2,
+.blog-section .list-card h2 {
   font-size: 24px;
   margin: 5px 0;
 }
@@ -170,21 +177,27 @@ a:hover {
 .main-section .experiences p,
 .hero .content a,
 .cards-section .card .project-links p,
+.blog-section .list-card p,
 footer .copy p {
-  font-size: 19px;
+  font-size: 24px;
   padding: 0 20px;
   text-align: justify;
   line-height: 1.7;
   font-weight: 300;
   margin-bottom: 12;
 }
-.hero .content a.more {
+.hero .content a.more,
+.main-section .download-link a {
   /* display: block; */
   text-decoration: none;
   color: var(--secondary-color);
   /* margin: 10px; */
 }
-
+.main-section .download-link {
+  display: flex;
+  justify-content: end;
+  max-width: 100%;
+}
 .main-section .profile .about {
   float: right;
   height: 300px;
@@ -192,28 +205,58 @@ footer .copy p {
   margin: 5px;
   border-radius: 5%;
 }
-.cards-section .card{
+.cards-section .card {
 }
-.cards-section .card .project-links p a{
-    text-decoration: none;
-    color: var(--secondary-color);
+.cards-section .card .project-links p a {
+  text-decoration: none;
+  color: var(--secondary-color);
 }
-.cards-section .card .project-links p a::after{
-    content: "";
-    display: block;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    border-bottom: 2px solid var(--secondary-color);
-    transform: scaleX(0);
-    transform-origin: left;
+.cards-section .card .project-links p a::after {
+  content: "";
+  display: block;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  border-bottom: 2px solid var(--secondary-color);
+  transform: scaleX(0);
+  transform-origin: left;
 }
-.cards-section .card .project-links p a:hover::after{
-    transform: scaleX(0.2);
-    transition: 0.1s linear;
+.cards-section .card .project-links p a:hover::after {
+  transform: scaleX(0.2);
+  transition: 0.1s linear;
 }
-.cards-section .card .project-links p a input:invalid{
-    color: red;
+.cards-section .card .project-links p a input:invalid {
+  color: red;
 }
+.blog-section .list-card .blog-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: var(--secondary-color) 1px solid;
+}
+.blog-section .list-card .blog-card p {
+  transform: scaleY(0); /* Mengubah skala tinggi vertikal menjadi 0 */
+  transform-origin: top; /* Menentukan titik asal transformasi di bagian atas */
+  transition: transform 0.3s ease; /* Animasi transformasi selama 0.3 detik dengan efek ease */
+  visibility: hidden; /* Menyembunyikan elemen dari tata letak */
+  margin: 0; /* Menghilangkan margin agar tidak mempengaruhi tata letak */
+  padding: 0; /* Menghilangkan padding agar tidak mempengaruhi tata letak */
+  height: 0; /* Mengatur tinggi elemen menjadi 0 */
+  opacity: 0; /* Menyembunyikan elemen dengan opacity 0 */
+}
+
+.blog-section .list-card .blog-card:hover p {
+  transform: scaleY(1); /* Mengembalikan skala tinggi vertikal ke 1 */
+  visibility: visible; /* Menampilkan elemen kembali */
+  height: auto; /* Mengatur tinggi kembali ke auto agar konten sesuai */
+  margin: 10px 0; /* Mengembalikan margin ke 10px */
+  padding: 10px; /* Mengembalikan padding ke 10px */
+  opacity: 1; /* Mengembalikan opacity ke 1 */
+}
+
 footer {
   border-top: var(--secondary-color) 1px solid;
   /* padding: 0 10px; */
@@ -266,14 +309,14 @@ footer .copy .content .dot {
   margin: 10px;
 }
 footer .copy .content p {
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 300;
   margin: 10px 0;
   padding: 0;
 }
 footer .copy .content a {
   color: var(--secondary-color);
-  font-size: 1rem;
+  font-size: 16px;
   font-weight: 300;
   letter-spacing: 1px;
 }
