@@ -6,32 +6,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Ubuntu", sans-serif;
-  font-size: 16px;
   background-color: var(--primary-color);
   color: var(--secondary-color);
-}
-.dark {
-  background-color: lightslategrey;
-  color: white !important;
-}
-
-.dark a,
-.dark .hero .content a,
-.dark .hero .part ul li a:last-child,
-.dark a:last-child,
-.dark footer .link ul li a,
-.dark footer .copy .content a,
-.main-section .download-link a,
-.dark h1,
-.dark h2,
-.dark h3,
-.dark h4,
-.dark p {
-  color: white !important;
-}
-
-.dark a:hover {
-  color: slategrey;
 }
 /* Container styles */
 .container {
@@ -39,7 +15,6 @@ body {
   margin: 0 auto;
   padding: 0;
 }
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -66,11 +41,12 @@ nav ul {
 }
 nav ul li {
   /* margin: 0 10px; */
+  /* font-size: 30px */
 }
 nav ul li a {
   color: var(--secondary-color);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   /* padding: 0 20px; */
   margin: 10px;
@@ -91,7 +67,9 @@ a:hover {
 .hero,
 .main-section,
 .cards-section,
-.blog-section {
+.blog-section,
+.project-section,
+.blog-post {
   /* background-color: var(--secondary-color); */
   color: var(--secondary-color);
   margin: 30px 0;
@@ -102,8 +80,10 @@ a:hover {
 .main-section .experiences,
 .main-section .download-link,
 .cards-section .card,
-.blog-section .list-card {
-  max-width: 50ch;
+.blog-section .list-card,
+.project-section .project,
+.blog-post .blog-article {
+  max-width: 90ch;
   padding: 10px;
   text-align: left;
   margin: 32px 0;
@@ -123,18 +103,18 @@ a:hover {
   margin: 2.5px 0;
   padding: 10px;
 }
-.hero .part ul li a:first-child {
+.hero .part ul li a.label {
   background-color: var(--secondary-color);
   text-decoration: none;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--primary-color);
   padding: 10px 20px;
   letter-spacing: 1px;
 }
-.hero .part ul li a:last-child {
+.hero .part ul li a.text {
   color: var(--secondary-color);
-  font-size: 16px;
+  font-size: 1rem;
   text-decoration: none;
   display: inline-block;
   font-weight: 300;
@@ -156,9 +136,13 @@ a:hover {
 }
 .hero .content span,
 .main-section .profile span,
-.main-section .experiences span {
+.main-section .experiences span,
+.blog-post .blog-article span {
   font-weight: 300;
   font-style: italic;
+}
+.blog-post .blog-article span {
+  font-weight: 500;
 }
 /* Header styles */
 .hero .content h1,
@@ -168,29 +152,43 @@ a:hover {
 .main-section .experiences h3,
 .main-section .experiences h4,
 .cards-section .card h1,
+.cards-section .card .project-links a h2,
+.cards-section .card .project-links .category h3,
 .blog-section .list-card h1,
-.blog-section .list-card h2 {
-  font-size: 32px;
+.blog-section .list-card h2,
+.blog-section .list-card .blog-card h2,
+.blog-section .list-card .blog-card h3,
+.blog-section .list-card .blog-card h4,
+.project-section .project h1,
+.blog-post .blog-article h1,
+.blog-post .blog-article .category h3 {
+  font-size: 2rem;
   padding: 0 20px;
   margin: 10px 0;
   font-weight: 400;
 }
 .main-section .profile h1,
 .main-section .experiences h1 {
-  font-size: 32px;
+  font-size: 2rem;
   margin: 10px 0;
 }
 .main-section .experiences h2,
-.blog-section .list-card h2 {
-  font-size: 24px;
+.cards-section .card .project-links a h2,
+.blog-section .list-card h2,
+.blog-section .list-card .blog-card h2 {
+  font-size: 1.5rem;
   margin: 5px 0;
 }
-.main-section .experiences h3 {
-  font-size: 18px;
+.main-section .experiences h3,
+.cards-section .card .project-links .category h3,
+.blog-section .list-card .blog-card h3,
+.blog-post .blog-article .category h3 {
+  font-size: 1.125rem ;
   margin: 5px 0;
 }
-.main-section .experiences h4 {
-  font-size: 10px;
+.main-section .experiences h4,
+.blog-section .list-card .blog-card h4 {
+  font-size: 0.625rem;
   margin: 5px 0;
 }
 /* Paragraph styles */
@@ -198,10 +196,13 @@ a:hover {
 .main-section .profile p,
 .main-section .experiences p,
 .hero .content a,
+.cards-section .card p,
 .cards-section .card .project-links p,
 .blog-section .list-card p,
+.project-section .project p,
+.blog-post .blog-article p,
 footer .copy p {
-  font-size: 24px;
+  font-size: 1.25rem;
   padding: 0 20px;
   text-align: justify;
   line-height: 1.7;
@@ -227,13 +228,19 @@ footer .copy p {
   margin: 5px;
   border-radius: 5%;
 }
-.cards-section .card {
+.cards-section .card .project-links {
+  margin: 10px 0;
 }
-.cards-section .card .project-links p a {
+.cards-section .card .project-links .category {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cards-section .card .project-links a {
   text-decoration: none;
   color: var(--secondary-color);
 }
-.cards-section .card .project-links p a::after {
+.cards-section .card .project-links a h2::after {
   content: "";
   display: block;
   padding-bottom: 5px;
@@ -242,43 +249,46 @@ footer .copy p {
   transform: scaleX(0);
   transform-origin: left;
 }
-.cards-section .card .project-links p a:hover::after {
+.cards-section .card .project-links a h2:hover::after {
   transform: scaleX(0.2);
   transition: 0.1s linear;
 }
-.cards-section .card .project-links p a input:invalid {
-  color: red;
+.cards-section .card .project-links a h2 p {
+  display: inline-block;
+}
+.cards-section .card .project-links {
+  margin: 20px;
+  padding: 20px;
+  border: #2660a4 1px solid;
+  border-radius: 10px;
 }
 .blog-section .list-card .blog-card {
+}
+.blog-section .list-card .blog-card .blog-link {
+  margin: 24px 0;
+}
+.blog-section .list-card .blog-card a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+.cards-section .card .project-links .category h3,
+.project-section .category h3,
+.blog-section .list-card .blog-card h3,
+.blog-post .blog-article .category h3 {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  /* margin: 5px 20px; */
+  margin-left: 20px;
+  padding: 5px 20px;
+  cursor: not-allowed;
+}
+.project-section .project img {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: left;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 10px;
-  border: var(--secondary-color) 1px solid;
+  height: 300px;
+  padding: 0 20px;
+  margin: 10px auto;
 }
-.blog-section .list-card .blog-card p {
-  transform: scaleY(0); /* Mengubah skala tinggi vertikal menjadi 0 */
-  transform-origin: top; /* Menentukan titik asal transformasi di bagian atas */
-  transition: transform 0.3s ease; /* Animasi transformasi selama 0.3 detik dengan efek ease */
-  visibility: hidden; /* Menyembunyikan elemen dari tata letak */
-  margin: 0; /* Menghilangkan margin agar tidak mempengaruhi tata letak */
-  padding: 0; /* Menghilangkan padding agar tidak mempengaruhi tata letak */
-  height: 0; /* Mengatur tinggi elemen menjadi 0 */
-  opacity: 0; /* Menyembunyikan elemen dengan opacity 0 */
-}
-
-.blog-section .list-card .blog-card:hover p {
-  transform: scaleY(1); /* Mengembalikan skala tinggi vertikal ke 1 */
-  visibility: visible; /* Menampilkan elemen kembali */
-  height: auto; /* Mengatur tinggi kembali ke auto agar konten sesuai */
-  margin: 10px 0; /* Mengembalikan margin ke 10px */
-  padding: 10px; /* Mengembalikan padding ke 10px */
-  opacity: 1; /* Mengembalikan opacity ke 1 */
-}
-
 footer {
   border-top: var(--secondary-color) 1px solid;
   /* padding: 0 10px; */
@@ -315,7 +325,7 @@ footer .copy {
   /* padding: 0 20px; */
 }
 footer .copy p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   margin: 0;
   padding: 0 10px;
@@ -331,14 +341,14 @@ footer .copy .content .dot {
   margin: 10px;
 }
 footer .copy .content p {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   margin: 10px 0;
   padding: 0;
 }
 footer .copy .content a {
   color: var(--secondary-color);
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 300;
   letter-spacing: 1px;
 }
@@ -346,4 +356,53 @@ footer .copy .end {
   font-weight: 300;
   margin: 24px 0;
   padding: 0 10px;
+}
+.dark {
+  background-color: slategrey;
+  color: white !important;
+}
+
+.dark a,
+.dark .hero .content a,
+.dark .hero .part ul li a:last-child,
+.dark a:last-child,
+.dark footer .link ul li a,
+.dark footer .copy .content a,
+/* .main-section .download-link a, */
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark p {
+  color: white;
+}
+
+.dark a:hover {
+  color: var(--secondary-color);
+}
+.dark .cards-section .card .project-links .category h3,
+.dark .project-section .category h3,
+.dark .blog-section .list-card .blog-card h3,
+.dark .hero .part ul li a:first-child {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+/* @media (min-width: 768px) {
+  body {
+    font-size: 40px;
+  }
+  nav ul li a {
+    background-color: black;
+    font-size: 40px; 
+    }
+} */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (max-width: 758px) {
+  html {
+    font-size: 65%;
+  }
 }
