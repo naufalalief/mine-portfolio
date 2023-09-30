@@ -97,6 +97,7 @@ a:hover {
   list-style: none;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   margin: 10px 0 32px 0;
   padding: 0 20px;
 }
@@ -393,7 +394,17 @@ footer .copy .end {
     font-size: 40px;
   }
   nav ul li a {
-    background-color: black;
-    font-size: 40px;
+    font-size: 20px;
+  }
+  .hero .part ul li{
+    font-size: 20px;
+  }
+  .hero .part ul li a.label{
+    display: inline-block;
+    padding: 0;
+  }
+  .hero .part ul li a.text{
+    display: inline-block;
+    padding: 0;
   }
 }
