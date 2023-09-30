@@ -57,8 +57,7 @@ nav ul li a {
   margin: 10px;
   letter-spacing: 1px;
 }
-nav .icon button#toggle-btn,
-nav .icon button#toggle-btn2 {
+nav .icon button#toggle-btn {
   background-color: transparent;
   border: none;
   outline: none;
@@ -257,8 +256,6 @@ footer .copy p {
   padding: 10px 20px;
   border: #2660a4 1px solid;
   border-radius: 10px;
-}
-.blog-section .list-card .blog-card {
 }
 .blog-section .list-card .blog-card .blog-link {
   margin: 20px;
