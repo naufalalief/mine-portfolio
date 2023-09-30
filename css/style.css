@@ -1,6 +1,8 @@
 :root {
   --primary-color: #edf7f6;
   --secondary-color: #2660a4;
+  --dark-primary-color: #595f72;
+  --code-bg-color: #282a36;
 }
 * {
   margin: 0;
@@ -268,8 +270,16 @@ footer .copy p {
   color: var(--secondary-color);
 }
 .blog-post .blog-article article pre {
+  display: flex;
   margin: 0 20px;
-  color: dodgerblue;
+}
+.blog-post .blog-article article pre code {
+  background-color: var(--code-bg-color);
+  padding: 10px 20px;
+  margin: 10px auto;
+  color: lightyellow;
+  border-radius: 10px;
+  /* border: 1px solid red; */
 }
 .cards-section .card .project-links .category h3,
 .project-section .category h3,
@@ -290,6 +300,12 @@ footer .copy p {
   flex-wrap: wrap;
   padding: 0 20px;
   margin: 10px auto;
+}
+.blog-post .blog-article p a,
+.project-section .project p a{
+  color: var(--secondary-color);
+  font-weight: 500;
+  text-decoration: underline;
 }
 footer {
   border-top: var(--secondary-color) 1px solid;
@@ -354,8 +370,8 @@ footer .copy .end {
   padding: 0 10px;
 }
 .dark {
-  background-color: slategrey;
-  color: white !important;
+  background-color: var(--dark-primary-color);
+  color: white;
 }
 
 .dark a,
@@ -387,9 +403,15 @@ footer .copy .end {
 .dark .blog-section .list-card .blog-card .blog-link {
   border: white 1px solid;
 }
-.dark .blog-post .blog-article article pre {
-  background-color: #333;
-  color: white;
+.dark .blog-post .blog-article article pre code {
+  background-color: var(--code-bg-color);
+  color: lightgreen;
+}
+.dark .blog-post .blog-article p a,
+.dark .project-section .project p a{
+  color: var(--primary-color);
+  font-weight: 500;
+  text-decoration: underline;
 }
 .dark .hero .part ul li a:last-child::after,
 .dark .hero .part ul li a:last-child:hover::after,
@@ -397,7 +419,7 @@ footer .copy .end {
 .dark .cards-section .card .project-links a h2:hover::after {
   border-bottom: 1px solid var(--primary-color);
 }
-.dark footer{
+.dark footer {
   border-top: white 1px solid;
 }
 @media (max-width: 768px) {
