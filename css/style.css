@@ -57,7 +57,8 @@ nav ul li a {
   margin: 10px;
   letter-spacing: 1px;
 }
-nav .icon button#toggle-btn {
+nav .icon button#toggle-btn,
+nav .icon button#toggle-btn2 {
   background-color: transparent;
   border: none;
   outline: none;
