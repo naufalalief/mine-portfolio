@@ -1,7 +1,6 @@
 const toggleBtn = document.getElementById("toggle-btn");
 const icon = toggleBtn.querySelector("img");
 
-// Cek apakah ada status terakhir pada localStorage
 const isDarkMode = localStorage.getItem("isDarkMode") === "true";
 if (isDarkMode) {
   document.body.classList.add("dark");

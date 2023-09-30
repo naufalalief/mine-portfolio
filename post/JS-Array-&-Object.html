@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Array dan Object</title>
+  </head>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet"
+  />
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../profile.html">Profile</a></li>
+          <li><a href="../portfolio.html">Portfolio</a></li>
+          <li><a href="../blog.html">Blog</a></li>
+        </ul>
+        <div class="icon" id="icon">
+          <button id="toggle-btn">
+            <img src="../image/moon.svg" alt="icon" />
+          </button>
+        </div>
+      </nav>
+      <section class="blog-post">
+        <div class="blog-article">
+          <article>
+            <h1>JavaScript Array & Object</h1>
+            <p>Pengertian JavaScript Array & Object</p>
+            <p>
+              JavaScript Array dan JavaScript Object adalah dua tipe data yang
+              fundamental dalam bahasa pemrograman JavaScript, dan keduanya
+              digunakan untuk mengorganisasi dan menyimpan data. Mari kita bahas
+              keduanya secara terpisah:
+            </p>
+            <p>
+              <span>1.Apa itu Array?</span>:<br />
+              Array adalah struktur data yang digunakan untuk menyimpan
+              sekumpulan nilai atau elemen dalam satu variabel. Elemen-elemen
+              dalam array dapat memiliki tipe data yang berbeda atau sama, dan
+              mereka diakses dengan menggunakan indeks numerik. Indeks dimulai
+              dari 0, artinya elemen pertama dalam array memiliki indeks 0, yang
+              kedua memiliki indeks 1, dan seterusnya. Contoh dari Array adalah
+              sebagai berikut:
+            </p>
+            <pre>
+                <code>
+                let fruits = ["apple", "banana", "cherry"];
+                let numbers = [1, 2, 3, 4, 5];                                 
+                </code>
+              </pre>
+            <p>
+              <span>2.Operasi pada Array</span>:<br />
+              <span>Pengaksesan Elemen</span>: Elemen-elemen dalam array dapat
+              diakses dengan menggunakan indeks. Contohnya, fruits[0] akan
+              mengembalikan "apple". <br />
+              <span>Manipulasi</span>: Kita dapat menambahkan, menghapus, atau
+              memodifikasi elemen-elemen dalam array. <br />
+              <span>Iterasi</span>: Kita dapat melakukan perulangan melalui
+              elemen-elemen array menggunakan loop atau metode seperti
+              forEach(). <br />
+              <span>Properti dan Metode</span>: Array memiliki properti dan
+              metode bawaan seperti length, push(), pop(), shift(), dan banyak
+              lainnya. <br />
+            </p>
+            <p>
+              <span>3.Apa itu Object?</span>:<br />
+              Object adalah struktur data yang digunakan untuk menyimpan data
+              dalam bentuk pasangan nilai (key-value). Setiap pasangan key-value
+              dalam objek disebut properti, di mana key adalah nama properti dan
+              value adalah nilai properti. Objek memungkinkan Kita untuk
+              mengorganisasi data dengan cara yang lebih fleksibel daripada
+              array karena key dapat berupa string atau simbol. Contoh dari
+              Object adalah sebagai berikut:
+            </p>
+            <pre>
+                <code>
+                let person = {
+                    name: "John",
+                    age: 30,
+                    city: "New York"
+                    };
+                let car = {
+                    make: "Toyota",
+                    model: "Camry",
+                    year: 2021
+                    };                      
+                </code>
+            </pre>
+            <p>
+              <span>4.Operasi pada Object</span>:<br />
+              <span>Pengaksesan Properti</span>: Properti dalam objek dapat
+              diakses dengan menggunakan nama properti. Contohnya, person.name
+              akan mengembalikan "John". <br />
+              <span>Penambahan dan Penghapusan Properti</span>: Kita dapat
+              menambahkan atau menghapus properti dari objek kapan saja. <br />
+              <span>Iterasi</span>: Kita dapat melakukan iterasi melalui
+              properti-properti objek menggunakan loop atau metode seperti
+              for...in. <br />
+              <span>Properti dan Metode</span>: Objek dapat memiliki properti
+              yang berupa nilai apa pun, termasuk objek atau fungsi (metode).
+              <br />
+            </p>
+            <p>
+              <span>5.Perbedaan Array dan Object</span>:<br />
+              <span>Array</span> digunakan ketika Kita memiliki kumpulan nilai
+              yang memiliki indeks numerik yang berurutan. <br />
+              <span>Object</span> digunakan ketika Kita ingin mengorganisasi
+              data dalam pasangan key-value dan ingin mengakses data dengan
+              menggunakan nama properti.
+            </p>
+            <p>
+              Contoh penggunaan yang umum adalah menggunakan array untuk
+              menyimpan daftar item yang berurutan seperti daftar belanjaan, dan
+              menggunakan objek untuk merepresentasikan objek dalam dunia nyata
+              seperti pengguna, mobil, atau pesanan.
+            </p>
+            <p>
+              Dalam JavaScript, Kita dapat menggabungkan keduanya. Kita dapat
+              memiliki array yang berisi objek atau objek yang memiliki properti
+              berupa array. Kedua tipe data ini adalah alat penting dalam
+              pengembangan perangkat lunak JavaScript yang efektif.
+            </p>
+          </article>
+          <div class="category">
+            <h3>Self Learning</h3>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <div class="link">
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/afalupanama/" target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://github.com/naufalalief" target="_blank"
+                >GitHub</a
+              >
+            </li>
+            <li><a href="#">Twitter</a></li>
+            <li>
+              <a href="https://www.linkedin.com/in/naufal-alief/">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+        <div class="copy">
+          <p>&copy; 2023 Naufal Alief</p>
+          <div class="content">
+            <p>
+              <a href="https://github.com/naufalalief/mine-portfolio">Source</a>
+            </p>
+            <p class="dot">•</p>
+            <p>
+              Inspired by
+              <a href="https://chrisnager.com/" target="_blank">Chris Nager</a>
+            </p>
+          </div>
+          <p class="end">
+            Dibuat dengan menggunakan HTML, CSS, dan JavaScript.
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="../js/script.js"></script>
+</html>
