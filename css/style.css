@@ -9,6 +9,7 @@ body {
   font-size: 16px;
   background-color: var(--primary-color);
   color: var(--secondary-color);
+  /* height: 100vh; */
 }
 /* Container styles */
 .container {
@@ -20,7 +21,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* padding: 0 10px; */
   height: 7rem;
 }
 
@@ -49,7 +49,7 @@ nav ul li a {
   text-decoration: none;
   font-size: 16px;
   font-weight: 500;
-  /* padding: 0 20px; */
+  padding: 0 8px;
   margin: 10px;
   letter-spacing: 1px;
 }
@@ -273,6 +273,10 @@ footer .copy p {
   text-decoration: none;
   color: var(--secondary-color);
 }
+.blog-post .blog-article article pre {
+  display: flex;
+  color: dodgerblue;
+}
 .cards-section .card .project-links .category h3,
 .project-section .category h3,
 .blog-section .list-card .blog-card h3,
@@ -294,7 +298,7 @@ footer .copy p {
 footer {
   border-top: var(--secondary-color) 1px solid;
   /* padding: 0 10px; */
-  margin: 32px 0;
+  margin: 32px 0 0 0;
 }
 footer .link {
   display: flex;
@@ -356,7 +360,7 @@ footer .copy .content a {
 }
 footer .copy .end {
   font-weight: 300;
-  margin: 24px 0;
+  margin: 24px 0 0 0;
   padding: 0 10px;
 }
 .dark {
@@ -389,22 +393,38 @@ footer .copy .end {
   background-color: var(--primary-color);
   color: var(--secondary-color);
 }
-@media  (max-width: 768px) {
+@media (max-width: 768px) {
   body {
-    font-size: 40px;
+    font-size: 65%;
+  }
+  nav {
+    padding: 0 10px;
   }
   nav ul li a {
+    padding: 10px;
+    margin: 0;
+  }
+  /* nav ul li a[href="index.html"] {
+    display: none;
+  } */
+  .hero .part ul li {
+    display: flex;
+    align-items: center;
     font-size: 20px;
   }
-  .hero .part ul li{
-    font-size: 20px;
-  }
-  .hero .part ul li a.label{
+  .hero .part ul li a.label {
     display: inline-block;
-    padding: 0;
+    padding: 10px 20px;
   }
-  .hero .part ul li a.text{
+  .hero .part ul li a.text {
     display: inline-block;
-    padding: 0;
+    padding: 20px;
+    text-overflow: ellipsis;
+  }
+  .main-section .profile .about{
+    height: 300px;
+    float: none;
+    display: flex;
+    margin: 10px auto;
   }
 }
