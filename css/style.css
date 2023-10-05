@@ -209,7 +209,7 @@ footer .copy p {
   text-align: justify;
   line-height: 1.7;
   font-weight: 300;
-  margin-bottom: 12;
+  margin-bottom: 16px;
 }
 .hero .content a,
 .main-section .download-link a {
@@ -456,7 +456,7 @@ footer .copy .end {
     text-overflow: ellipsis;
   }
   .main-section .profile .about {
-    height: 300px;
+    height: 350px;
     float: none;
     display: flex;
     margin: 10px auto;
