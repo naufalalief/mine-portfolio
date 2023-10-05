@@ -164,7 +164,8 @@ nav .icon button#toggle-btn {
 .blog-section .list-card .blog-card h4,
 .project-section .project h1,
 .blog-post .blog-article h1,
-.blog-post .blog-article .category h3 {
+.blog-post .blog-article .category h3,
+.project-section .category h3 {
   font-size: 32px;
   padding: 0 20px;
   margin: 10px 0;
@@ -185,7 +186,8 @@ nav .icon button#toggle-btn {
 .main-section .experiences h3,
 .cards-section .card .project-links .category h3,
 .blog-section .list-card .blog-card h3,
-.blog-post .blog-article .category h3 {
+.blog-post .blog-article .category h3,
+.project-section .category h3 {
   font-size: 18px;
   margin: 5px 0;
 }
@@ -295,7 +297,7 @@ footer .copy p {
 }
 .project-section .project img {
   display: flex;
-  width: 100%; 
+  width: 100%;
   max-width: 600px;
   height: auto;
   flex-wrap: wrap;
