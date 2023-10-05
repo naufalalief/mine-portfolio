@@ -302,6 +302,12 @@ footer .copy p {
   margin: 10px auto;
   border-radius: 10px;
 }
+.project-section .category p,
+.blog-post .blog-article .category p {
+  padding: 0 20px;
+  font-size: 10px;
+  margin: 0;
+}
 .blog-post .blog-article p a,
 .project-section .project p a {
   color: var(--secondary-color);
@@ -463,5 +469,6 @@ footer .copy .end {
   }
   .project-section .project img {
     margin: 10px auto;
+    padding: 0 20px;
   }
 }
